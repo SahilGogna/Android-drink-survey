@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/drinkTopLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drinks_survey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10sp"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/clientNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/client_number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drinkTopLabel"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp" />
+
+    <EditText
+        android:id="@+id/clientNumberInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/clientNumberLabel"
+        app:layout_constraintStart_toEndOf="@id/clientNumberLabel"
+        android:layout_marginLeft="10sp"
+        android:layout_marginStart="10sp" />
+
+    <TextView
+        android:id="@+id/drinkTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drink_type"
+        app:layout_constraintStart_toStartOf="@id/clientNumberLabel"
+        app:layout_constraintTop_toBottomOf="@id/clientNumberLabel"
+        android:layout_marginTop="20sp" />
+
+    <Spinner
+        android:id="@+id/drinkSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/clientNumberInput"
+        app:layout_constraintEnd_toEndOf="@id/clientNumberInput"
+        app:layout_constraintTop_toTopOf="@id/drinkTypeLabel"
+        app:layout_constraintBottom_toBottomOf="@id/drinkTypeLabel"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/drinkLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drink"
+        app:layout_constraintStart_toStartOf="@id/drinkTypeLabel"
+        app:layout_constraintTop_toBottomOf="@id/drinkTypeLabel"
+        android:layout_marginTop="20sp" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/drinkSpinner"
+        app:layout_constraintEnd_toEndOf="@id/drinkSpinner"
+        app:layout_constraintTop_toTopOf="@id/drinkLabel"
+        app:layout_constraintBottom_toBottomOf="@id/drinkLabel"
+        />
+
+    <TextView
+        android:id="@+id/numberOfCupsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_of_cups_day"
+        app:layout_constraintTop_toBottomOf="@id/drinkLabel"
+        app:layout_constraintStart_toStartOf="@id/drinkLabel"
+        android:layout_marginTop="20sp"/>
+
+    <EditText
+        android:id="@+id/numberOfCupsInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/numberOfCupsLabel"
+        app:layout_constraintStart_toEndOf="@id/numberOfCupsLabel"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10sp"
+        android:layout_marginBottom="40sp"/>
+
+    <Button
+        android:id="@+id/new_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_Button"
+        app:layout_constraintStart_toEndOf="@id/add_button"
+        app:layout_constraintBottom_toBottomOf="@id/add_button"
+        android:layout_marginLeft="10sp"/>
+
+    <Button
+        android:id="@+id/results_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/results"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/new_button"/>
+
+
+</android.support.constraint.ConstraintLayout>
